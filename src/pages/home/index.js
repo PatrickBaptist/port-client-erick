@@ -48,7 +48,6 @@ function Home() {
                         <img src={Modelo4} alt='imagens'/>
                         <img src={Modelo5} alt='imagens'/>
                     </div>
-                    <div className='modal-about'></div>
                 </div>
             </section>
 
