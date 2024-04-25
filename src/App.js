@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import Footer from './components/footer/indext';
+import Whats from './components/whats-contact/index'
+import Header from './components/header';
+import Menu from './components/menu';
+import Home from './pages/home';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Interno from './pages/internos';
+import Externo from './pages/externos';
+import Eventos from './pages/eventos';
+import ScrollToTop from "./components/scrolltotop/scrolltotop"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Header />
+        <Menu />
+
+        <ScrollToTop />
+        <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/internos' element={<Interno />} />
+            <Route path='/externos' element={<Externo />} />
+            <Route path='/eventos' element={<Eventos />} />
+        </Routes>
+
+        <Whats />
+        <Footer />
+
+      </div>
+    </BrowserRouter>
   );
 }
 

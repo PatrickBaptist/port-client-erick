@@ -1,0 +1,66 @@
+footer {
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    margin-top: 20px;
+    border-top: 1px solid #fff;
+
+    .contact {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px;
+
+        h1 {
+            font-size: 20px;
+        }
+    }
+}
+
+.div-spans {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    font-size: 13px;
+    gap: 10px;
+
+    span {
+        margin-left: 5px;
+    }
+
+    a {
+        text-decoration: none;
+        color: #8c8c8c;
+    }
+}
+
+.container-gotop {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gotop {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-size: 30px;
+    cursor: pointer;
+
+    &:hover {
+        color: black;
+        background-color: rgb(255, 255, 255);
+    }
+}
+
+.developer {
+    font-size: 11px;
+    color: #8c8c8c;
+}
