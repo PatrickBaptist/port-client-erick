@@ -9,7 +9,7 @@ function Whats() {
                     <span>Entre em contato: </span>
                 </div>
                     <div>
-                <a href="https:www.instagram.com/e.ricking?igsh=dTFoNXIweDk44MzZ3" target="_blank" rel="noreferrer">
+                <a href="https://www.instagram.com/e.ricking?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noreferrer">
                 <FontAwesomeIcon icon={faInstagram} className="insta-icon" />
                 </a>
                 <a href="https://wa.me/5521971701316" target="_blank" rel="noreferrer">

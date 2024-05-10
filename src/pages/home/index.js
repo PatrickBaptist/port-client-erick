@@ -52,7 +52,7 @@ function Home() {
             </section>
 
     <form
-    action="https://formspree.io/f/xbjvrprz"
+    action="https://formspree.io/f/mzbnwdvq"
     method="POST"
     >
         

@@ -24,7 +24,7 @@ function Externo() {
                 <div className='divider'></div>
 
                 <div className='content-ensaios'>
-                <h3>Como produzo ,eus ensaios externos</h3>
+                <h3>Como produzo meus ensaios externos</h3>
                 <p>Em primeiro contato com o cliente, busco perguntar sobre referências que ele(a) tenha e como gostaria que fossem feitas as fotos (local, horário, look, maquiagem e etc).</p>
                 <p>Sempre envio ao cliente parte das imagens com  a pós produção para ter um feedback do que ele gostaria de mudar mediante a seu gosto/objetivo.</p>
                 </div>
