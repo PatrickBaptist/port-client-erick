@@ -5,11 +5,11 @@ import { useNavigate } from "react-router-dom"
 
 function Menu() {
 
-    const {openMenu, setOpenMenu} = useContext(UserContext)
+    const [openMenu, setOpenMenu] = useContext(UserContext)
     const navigate = useNavigate()
 
     const handleMenuClick = () => {
-        setOpenMenu(!openMenu);
+        setOpenMenu(!openMenu)
     }
 
     return (
@@ -27,7 +27,7 @@ function Menu() {
                 </div>
             </div>
         </div>
-    );
+    )
 }
 
-export default Menu;
+export default Menu

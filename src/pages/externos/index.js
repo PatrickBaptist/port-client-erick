@@ -15,8 +15,24 @@ import Externo13 from '../../assets/outside/externo-13.jpg'
 import Externo14 from '../../assets/outside/externo-14.JPG'
 import Externo15 from '../../assets/outside/externo-15.jpg'
 import Externo16 from '../../assets/outside/externo-16.JPG'
+import React, { useContext } from 'react';
+import { ImageContext } from '../../context/openImage';
+import { CurrentContext } from '../../context/currentImage';
 
 function Externo() {
+
+    const [openImage, setOpenImage] = useContext(ImageContext)
+    const [currentImage, setCurrentImage] = useContext(CurrentContext)
+
+    const handleImageClick = () => {
+        setOpenImage(false)
+    }
+    
+    const openPicture = (image) => {
+        setCurrentImage(image)
+        setOpenImage(true)
+    }
+
     return (
         <div className="container-interno">
             <div className='content-externo'>
@@ -32,23 +48,30 @@ function Externo() {
             </div>
             
             <div className='photos-outside'>
-                <img src={Externo1} alt='photo1' />
-                <img src={Externo2} alt='photo2' />
-                <img src={Externo3} alt='photo3' />
-                <img src={Externo4} alt='photo4' />
-                <img src={Externo5} alt='photo5' />
-                <img src={Externo6} alt='photo6' />
-                <img src={Externo7} alt='photo7' />
-                <img src={Externo8} alt='photo8' />
-                <img src={Externo9} alt='photo9' />
-                <img src={Externo10} alt='photo10' />
-                <img src={Externo11} alt='photo11' />
-                <img src={Externo12} alt='photo12' />
-                <img src={Externo13} alt='photo13' />
-                <img src={Externo14} alt='photo14' />
-                <img src={Externo15} alt='photo15' />
-                <img src={Externo16} alt='photo16' />
+                <img src={Externo1} alt='photo1' onClick={() => openPicture(Externo1)}/>
+                <img src={Externo2} alt='photo2' onClick={() => openPicture(Externo2)}/>
+                <img src={Externo3} alt='photo3' onClick={() => openPicture(Externo3)}/>
+                <img src={Externo4} alt='photo4' onClick={() => openPicture(Externo4)}/>
+                <img src={Externo5} alt='photo5' onClick={() => openPicture(Externo5)}/>
+                <img src={Externo6} alt='photo6' onClick={() => openPicture(Externo6)}/>
+                <img src={Externo7} alt='photo7' onClick={() => openPicture(Externo7)}/>
+                <img src={Externo8} alt='photo8' onClick={() => openPicture(Externo8)}/>
+                <img src={Externo9} alt='photo9' onClick={() => openPicture(Externo9)}/>
+                <img src={Externo10} alt='photo10' onClick={() => openPicture(Externo10)}/>
+                <img src={Externo11} alt='photo11' onClick={() => openPicture(Externo11)}/>
+                <img src={Externo12} alt='photo12' onClick={() => openPicture(Externo12)}/>
+                <img src={Externo13} alt='photo13' onClick={() => openPicture(Externo13)}/>
+                <img src={Externo14} alt='photo14' onClick={() => openPicture(Externo14)}/>
+                <img src={Externo15} alt='photo15' onClick={() => openPicture(Externo15)}/>
+                <img src={Externo16} alt='photo16' onClick={() => openPicture(Externo16)}/>
             </div>
+            {openImage && (
+                <div className="container-img" onClick={handleImageClick}>
+                    <div className='content-img'>
+                        <img src={currentImage} alt='imagens' />
+                    </div>
+                </div>
+            )}
         </div>
     )
 }

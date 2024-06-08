@@ -4,8 +4,24 @@ import Modelo3 from '../../assets/modelo-3.JPG'
 import Modelo4 from '../../assets/modelo-4.jpg'
 import Modelo5 from '../../assets/modelo-5.JPG'
 import './style.scss'
+import React, { useContext } from 'react';
+import { ImageContext } from '../../context/openImage';
+import { CurrentContext } from '../../context/currentImage';
 
 function Home() {
+
+    const [openImage, setOpenImage] = useContext(ImageContext)
+    const [currentImage, setCurrentImage] = useContext(CurrentContext)
+
+    const handleImageClick = () => {
+        setOpenImage(false)
+    }
+    
+    const openPicture = (image) => {
+        setCurrentImage(image)
+        setOpenImage(true)
+    }
+
     return (
         <div className="container">
             <ModalBackground />
@@ -43,52 +59,60 @@ function Home() {
                         <p>A direção de fotografia é muito importante, entao, eu sempre direciono o cliente de uma forma que ele(a) não se sinta pressionado(a) e assim, conseguimos fazer as fotos o mais natural possível.</p>
                     </div>
                     <div className='grid-images'>
-                        <img src={Modelo2} alt='imagens'/>
-                        <img src={Modelo3} alt='imagens'/>
-                        <img src={Modelo4} alt='imagens'/>
-                        <img src={Modelo5} alt='imagens'/>
+                        <img src={Modelo2} alt='imagens' onClick={() => openPicture(Modelo2)} />
+                        <img src={Modelo3} alt='imagens' onClick={() => openPicture(Modelo3)}/>
+                        <img src={Modelo4} alt='imagens' onClick={() => openPicture(Modelo4)}/>
+                        <img src={Modelo5} alt='imagens' onClick={() => openPicture(Modelo5)}/>
                     </div>
+                    {openImage && (
+                        <div className="container-img" onClick={handleImageClick}>
+                            <div className='content-img'>
+                                <img src={currentImage} alt='imagens' />
+                            </div>
+                        </div>
+                    )}
                 </div>
             </section>
 
-    <form
-    action="https://formspree.io/f/mzbnwdvq"
-    method="POST"
-    >
+            <form
+            action="https://formspree.io/f/mzbnwdvq"
+            method="POST"
+            >
         
-            <h1>Faça seu contato!</h1>
-            <div className="divider"></div>
+                <h1>Faça seu contato!</h1>
+                <div className="divider"></div>
     
     
     
-        <div class="content-form">
-            <label>
-                Nome:
-            </label>
-                <input type="text" name="Nome" autocomplete="on" />
-            
-            <label>
-                Telefone:
-            </label>
-                <input type="number" name="Telefone" autocomplete="on" />
-        
-            <label>
-                Email:
-            </label>
-                <input type="email" name="Email" autocomplete="on" />
+                <div className="content-form">
+                    <label>
+                        Nome:
+                    </label>
+                        <input type="text" name="Nome" autoComplete="on" />
+                    
+                    <label>
+                        Telefone:
+                    </label>
+                        <input type="number" name="Telefone" autoComplete="on" />
+                
+                    <label>
+                        Email:
+                    </label>
+                        <input type="email" name="Email" autoComplete="on" />
 
-            <label>
-            Mensagem:
-            </label>
-            <textarea name="Mensagem" placeholder="Digite sua mensagem..."></textarea>
-            
-            <div className='button-position'>
-                <button type="submit">
-                    Enviar
-                </button>    
-            </div>     
-        </div>                       
-    </form>
+                    <label>
+                    Mensagem:
+                    </label>
+                    <textarea name="Mensagem" placeholder="Digite sua mensagem..."></textarea>
+                    
+                    <div className='button-position'>
+                        <button type="submit">
+                            Enviar
+                        </button>    
+                    </div>     
+                </div>     
+
+            </form>
 
         </div>
     )

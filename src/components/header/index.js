@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom"
 
 function Header() {
 
-    const {openMenu, setOpenMenu} = useContext(UserContext)
+    const [openMenu, setOpenMenu] = useContext(UserContext)
     const navigate = useNavigate()
 
     const handleMenuClick = () => {

@@ -6,7 +6,7 @@ export const UserStore = ({ children }) => {
     const [openMenu, setOpenMenu] = useState(false)
 
     return  (
-        <UserContext.Provider value={{openMenu, setOpenMenu}}>
+        <UserContext.Provider value={[openMenu, setOpenMenu]}>
             {children}
         </UserContext.Provider>
     )
