@@ -1,22 +1,28 @@
 footer {
     width: 100%;
-    height: 30vh;
+    height: auto;
     display: flex;
-    position: absolute;
     flex-direction: column;
-    margin-top: 20px;
-    border-top: 1px solid #fff;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+    background-color: #1a1a1a;
+    padding: 20px 150px;
+
+    @media(max-width: 768px) {
+        padding: 20px 20px;
+    }
 
     .contact {
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
         margin-top: 10px;
 
         h1 {
-            font-size: 20px;
+            font-size: 24px;
+            color: #fff;
         }
     }
 }
@@ -25,18 +31,24 @@ footer {
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: center; /* Alinhamento central */
     justify-content: center;
-    font-size: 13px;
-    gap: 10px;
+    font-size: 14px; /* Aumentado para melhor legibilidade */
+    gap: 8px; /* Espaçamento entre os spans */
 
     span {
         margin-left: 5px;
+        color: #ccc; /* Cor mais clara para contraste */
     }
 
     a {
         text-decoration: none;
         color: #8c8c8c;
+        transition: color 0.3s; /* Transição suave */
+        
+        &:hover {
+            color: #fff; /* Mudança de cor ao passar o mouse */
+        }
     }
 }
 
@@ -45,14 +57,17 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 15px; /* Adicionado espaçamento superior */
 }
 
 .gotop {
-    width: 30px;
-    height: 30px;
+    width: 40px; /* Aumentado para mais destaque */
+    height: 40px;
     border-radius: 50%;
     font-size: 30px;
     cursor: pointer;
+    color: #8c8c8c;
+    transition: background-color 0.3s, color 0.3s; /* Transição suave */
 
     &:hover {
         color: black;
@@ -61,6 +76,8 @@ footer {
 }
 
 .developer {
-    font-size: 11px;
+    font-size: 12px; /* Aumentado para legibilidade */
     color: #8c8c8c;
+    text-align: center; /* Centralizado */
+    margin-top: 10px; /* Espaçamento superior */
 }

@@ -12,8 +12,11 @@ function Header() {
     const navigate = useNavigate()
 
     const handleMenuClick = () => {
-        setOpenMenu(!openMenu);
-    }
+        setOpenMenu(prev => !prev);
+        
+        const iconBar = document.querySelector('.icon-bar');
+        iconBar.classList.toggle('active');
+    };
 
     return (
         <header>

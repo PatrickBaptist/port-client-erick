@@ -13,8 +13,8 @@ function Menu() {
     }
 
     return (
-        <div className="container-menu" style={ openMenu ? {display: "block"} : {display: "none"} }>
-            <div className='modal-menu' onClick={handleMenuClick}>
+        <div className={`container-menu ${openMenu ? 'open' : ''}`}>
+            <div className={`modal-menu ${openMenu ? 'open' : ''}`} onClick={handleMenuClick}>
                 <div className='content-menu'>
                     <nav>
                         <ul>

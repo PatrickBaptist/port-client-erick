@@ -1,8 +1,8 @@
-import ModalBackground from '../../components/modal';
 import Modelo2 from '../../assets/modelo-2.jpg'
 import Modelo3 from '../../assets/modelo-3.JPG'
 import Modelo4 from '../../assets/modelo-4.jpg'
 import Modelo5 from '../../assets/modelo-5.JPG'
+import Erick from '../../assets/erick/erick-1.JPG'
 import './style.scss'
 import React, { useContext } from 'react';
 import { ImageContext } from '../../context/openImage';
@@ -24,18 +24,16 @@ function Home() {
 
     return (
         <div className="container">
-            <ModalBackground />
-            <div className='content-home'>
-                <h1>Fotógrafo</h1>
+            <div className="content-home">
                 <div className='right-span'>
                     <div className='right-content'>
-                        <h3>Olá,</h3>
-                        <p>ME CHAMO <span>ERICK</span></p>
-                        <p>E ESTE É MEU <span>PORTFÓLIO</span></p>
+                        <h3>Bem-vindo,</h3>
+                        <p>EU SOU <span>ERICK</span></p>
+                        <p>APAIXONADO POR <span>CAPTURAR HISTÓRIAS</span></p>
                     </div>
                     <div className='span-content'>
-                        <span>Especializado em retratos</span>
-                        <span>natural do Rio de janeiro.</span>
+                        <span>Retratos autênticos e emocionantes</span>
+                        <span>Baseado no Rio de Janeiro.</span>
                     </div>
                 </div>
             </div>
@@ -45,24 +43,39 @@ function Home() {
                     <div className='content-about'>
                         <h1>SOBRE MIM</h1>
                         <div className='divider'></div>
-                        <p>Comecei a trabalhar na area de fotografia em 2014, com ensaios de 15 anos e festas infantis, mas, foi em 2019 que tive o primeiro contato com a moda, onde preferi seguir minha carreira.</p>
+
+                        <div className='img-p'>
+                            <div className='erick-img'>
+                                <img src={Erick} alt='imagens' loading="lazy"/>
+                            </div>
+
+                            <div className='paragraphs'>
+                                <p>
+                                    Comecei minha carreira na fotografia em 2014, fotografando ensaios de 15 anos e festas infantis. Esses eventos me deram uma base sólida para desenvolver minhas habilidades, capturando momentos espontâneos e emoções autênticas. Embora eu gostasse desse tipo de trabalho, sempre senti que poderia explorar mais o meu lado criativo. Foi então, em 2019, que tive meu primeiro contato com a fotografia de moda, e percebi que era nesse campo que eu queria investir. A possibilidade de trabalhar com estética, arte e colaborar com outros profissionais da área despertou em mim uma nova paixão.
+                                </p>
+                                <p>   
+                                    A partir desse momento, decidi focar minha carreira na fotografia de moda, onde encontrei mais liberdade para experimentar técnicas e explorar minha visão artística. Trabalhar com conceitos criativos, contar histórias através de poses, roupas e cenários me proporcionou um novo leque de oportunidades. Hoje, após alguns anos nesse segmento, sinto que a transição para a moda foi essencial para meu crescimento profissional e para me desafiar continuamente a criar imagens únicas e impactantes.
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                    <div className='modal-about'></div>
                 </div>
             </main>
 
             <section>
-            <div className='production-container'>
-                    <div className='content-about'>
+                <div className='production-container'>
+                    <div className='content-section'>
                         <h1>DIREÇÃO DE FOTOGRAFIA</h1>
                         <div className='divider'></div>
-                        <p>A direção de fotografia é muito importante, entao, eu sempre direciono o cliente de uma forma que ele(a) não se sinta pressionado(a) e assim, conseguimos fazer as fotos o mais natural possível.</p>
+                        <p>
+                        A direção de fotografia é essencial para o sucesso de uma sessão, pois envolve tanto a parte técnica quanto a interação com o cliente. Por isso, sempre procuro orientar de forma cuidadosa e sensível, criando um ambiente onde o cliente se sinta à vontade e confiante, sem pressões. Meu objetivo é capturar imagens autênticas e espontâneas, permitindo que as emoções fluam de maneira natural. Ao equilibrar orientações com liberdade, as poses surgem de forma fluida, resultando em fotos que não só refletem a imagem, mas também a essência e personalidade de cada pessoa.
+                        </p>
                     </div>
                     <div className='grid-images'>
-                        <img src={Modelo2} alt='imagens' onClick={() => openPicture(Modelo2)} />
-                        <img src={Modelo3} alt='imagens' onClick={() => openPicture(Modelo3)}/>
-                        <img src={Modelo4} alt='imagens' onClick={() => openPicture(Modelo4)}/>
-                        <img src={Modelo5} alt='imagens' onClick={() => openPicture(Modelo5)}/>
+                        <img src={Modelo2} alt='imagens' loading="lazy" onClick={() => openPicture(Modelo2)} />
+                        <img src={Modelo3} alt='imagens' loading="lazy" onClick={() => openPicture(Modelo3)}/>
+                        <img src={Modelo4} alt='imagens' loading="lazy" onClick={() => openPicture(Modelo4)}/>
+                        <img src={Modelo5} alt='imagens' loading="lazy"  onClick={() => openPicture(Modelo5)}/>
                     </div>
                     {openImage && (
                         <div className="container-img" onClick={handleImageClick}>
@@ -79,7 +92,7 @@ function Home() {
             method="POST"
             >
         
-                <h1>Faça seu contato!</h1>
+                <h2>Faça seu contato!</h2>
                 <div className="divider"></div>
     
     

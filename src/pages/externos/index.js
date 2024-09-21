@@ -41,8 +41,9 @@ function Externo() {
 
                 <div className='content-ensaios'>
                 <h3>Como produzo meus ensaios externos</h3>
-                <p>Em primeiro contato com o cliente, busco perguntar sobre referências que ele(a) tenha e como gostaria que fossem feitas as fotos (local, horário, look, maquiagem e etc).</p>
-                <p>Sempre envio ao cliente parte das imagens com  a pós produção para ter um feedback do que ele gostaria de mudar mediante a seu gosto/objetivo.</p>
+                <p>No primeiro contato com o cliente, minha prioridade é entender suas expectativas e desejos em relação à sessão de fotos. Para isso, busco perguntar sobre referências que ele(a) tenha, além de discutir detalhes como o local e o horário ideais para a realização das fotos, assim como o estilo de look e maquiagem que gostaria de utilizar. Essa conversa inicial é fundamental para criar um ambiente colaborativo e assegurar que o resultado final atenda às suas expectativas, refletindo sua personalidade e visão. Compreender suas preferências me ajuda a planejar cada aspecto da sessão de forma a criar imagens que realmente capturem a essência do que ele(a) deseja.</p> 
+                
+                <p>Após a sessão, sempre envio ao cliente uma seleção de imagens com a pós-produção aplicada, permitindo que ele tenha uma visão antecipada do resultado final. Essa prática é essencial para garantir que suas opiniões e gostos sejam considerados no produto final. O feedback que recebo nessa etapa é valioso, pois possibilita ajustar detalhes, caso necessário, e fazer mudanças que estejam alinhadas aos objetivos do cliente. Essa comunicação contínua não só fortalece a relação de confiança entre nós, mas também assegura que o resultado final seja verdadeiramente satisfatório e reflita a visão que o cliente tem em mente.</p>
                 </div>
 
             </div>

@@ -17,9 +17,9 @@ function Footer() {
                 <div className="divider"></div>
             </div>
             <div className="div-spans">
-                <span>Instagram: @e.ricking</span>
+                <span>Instagram: <a href="https://www.instagram.com/e.ricking?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noreferrer">@e.ricking</a></span>
                 <span>e-mail: erick.show95@gmail.com</span>
-                <span>Telefone e Whatsapp: (21) 97170-1316</span>
+                <span>Telefone e Whatsapp: <a href="https://wa.me/5521971701316" target="_blank" rel="noreferrer">(21) 97170-1316</a></span>
         
                 <span className="developer">desenvolvido por: <a href="https://patrickbaptista-portfolio.netlify.app/" target="_blank" rel="noreferrer">&#169;Patrick Baptista</a></span>
                 
